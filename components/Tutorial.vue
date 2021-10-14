@@ -44,3 +44,17 @@
     </div>
   </div>
 </template>
+
+<script lang='ts'>
+import { defineComponent } from '@nuxtjs/composition-api'
+import { logger } from '@@/utils/logger'
+
+export default defineComponent({
+  props: {
+    title: { type: String, default: '' }
+  },
+  mounted() {
+    logger('tutorial')
+  }
+})
+</script>

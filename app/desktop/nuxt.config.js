@@ -1,8 +1,11 @@
+import { resolve } from 'path'
+
 export default {
-  srcDir: __dirname,
-  buildDir: '.nuxt/desktop',
   server: {
     port: 4000,
+  },
+  alias: {
+    '@@': resolve(__dirname, '../..'),
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
