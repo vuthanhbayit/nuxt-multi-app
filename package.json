@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev:mobile": "nuxt app/mobile",
-    "dev:desktop": "nuxt app/desktop",
+    "dev:mobile": "nuxt --config-file app/mobile/nuxt.config.js",
+    "dev:desktop": "nuxt --config-file app/desktop/nuxt.config.js",
     "build:mobile": "nuxt build app/mobile",
     "build:desktop": "nuxt build app/desktop",
     "start:mobile": "nuxt start app/mobile",
@@ -32,6 +32,7 @@
     "@nuxtjs/eslint-config-typescript": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/tailwindcss": "^4.2.0",
+    "@vt7/tsconfig-module": "^0.0.2",
     "concurrently": "^6.3.0",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",

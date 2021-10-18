@@ -1,6 +1,8 @@
 import { resolve } from 'path'
 
 export default {
+  srcDir: __dirname,
+  buildDir: '.nuxt/desktop',
   server: {
     port: 4000,
   },
@@ -35,6 +37,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@vt7/tsconfig-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -57,4 +60,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  tsConfig: {
+    exclude: ['app/mobile'],
+  },
 }

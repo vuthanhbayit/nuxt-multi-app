@@ -1,11 +1,15 @@
 import { resolve } from 'path'
 
 export default {
+  srcDir: __dirname,
+  buildDir: '.nuxt/mobile',
   server: {
     port: 4001,
   },
   alias: {
     '@@': resolve(__dirname, '../..'),
+    '@common': resolve(__dirname, './components/common'),
+    '@base': resolve(__dirname, './components/common/base'),
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -35,6 +39,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/eslint-module',
+    '@vt7/tsconfig-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -64,5 +69,9 @@ export default {
         type: 'javascript/auto',
       })
     },
+  },
+
+  tsConfig: {
+    exclude: ['app/desktop'],
   },
 }
